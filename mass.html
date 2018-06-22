@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+ <link rel="stylesheet" type="text/css" href="len.css"> 
+ <link rel="shortcut icon" type="image/ico" href="scale.jpg">
+<title>Convertor</title> 
+</head>
+<body>
+<header>
+<nav   class="navbar navbar-default" id="changenav">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <p>Unites  Station</p>
+
+    </div>
+    <ul class="nav navbar-nav" id="thisnav">
+      <li><a href="#">Mass</a></li>
+      <li><a href="length.html">Distance</a></li>
+      <li><a href="temp.html">Tempreture</a></li>
+    </ul>
+  </div>
+</nav>
+  
+</header>
+<div id="mydiv"> 
+<h2>Length Converter</h2>
+<p>Type a value in the Feet field to convert the value to Meters:</p>
+
+<p>
+  <label>Enter</label>
+  <input id="input"type="number" placeholder="" >
+</p>
+<br>
+<p>Result =  <span id="output">0</span></p> 
+	
+	<br><br>
+<input type="radio" name="convert" value="" id="mtk" onclick="selected()">Pound to Kilo gram<br> 
+
+<br>
+<input type="radio" name="convert" value="e" id="ktm" onclick="selected()">Kilo gram to Pound<br>
+<button onclick="myFunction()"> convert  </button>
+<button onclick="reset()" >Reset</button>
+
+
+<script> 
+function reset(){
+
+document.getElementById("output").innerHTML= "0" ; 
+
+}
+
+
+
+
+function myFunction() {
+  x =  document.getElementById("input").value ; 
+  
+if( document.getElementById("mtk").checked){
+  document.getElementById("output").innerHTML= x/2.20462262185 + "kg" ; 
+} 
+else if( document.getElementById("ktm").checked){
+  document.getElementById("output").innerHTML= x*2.20462262185+ "lb" ; 
+} 
+} 
+
+</script> 
+</div> 
+</body>
+</html>
